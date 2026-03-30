@@ -303,6 +303,148 @@
     color: #aaa;
   }
 
+  /* ===== スマホ対応 ===== */
+  @media screen and (max-width: 768px) {
+    section {
+      width: 100%;
+      height: auto;
+      min-height: 100vh;
+      min-height: 100dvh;
+      padding: 40px 24px;
+    }
+
+    /* タイトル */
+    .title-slide .top-bar {
+      padding: 16px 24px;
+      font-size: 14px;
+    }
+
+    .title-slide .main {
+      padding: 0 24px;
+    }
+
+    .title-slide h1 {
+      font-size: 32px;
+    }
+
+    .title-slide .accent {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .title-slide .desc {
+      font-size: 16px;
+      margin-bottom: 28px;
+    }
+
+    .title-slide .divider {
+      margin-bottom: 20px;
+    }
+
+    .title-slide .toc {
+      font-size: 15px;
+    }
+
+    .title-slide .note {
+      position: static;
+      margin-top: 32px;
+      font-size: 13px;
+    }
+
+    /* コンテンツ共通 */
+    .content-slide h2 {
+      font-size: 26px;
+      padding-left: 14px;
+      border-left-width: 4px;
+      margin-bottom: 8px;
+    }
+
+    .content-slide .sub {
+      font-size: 14px;
+      margin-bottom: 24px;
+      padding-bottom: 14px;
+    }
+
+    /* 固定報酬 */
+    .price-hero {
+      margin-bottom: 24px;
+    }
+
+    .price-hero .amount {
+      font-size: 52px;
+    }
+
+    .price-hero .unit {
+      font-size: 18px;
+    }
+
+    .step-cards {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .step-cards li {
+      padding: 18px 20px;
+    }
+
+    .step-cards li strong {
+      font-size: 17px;
+    }
+
+    .step-cards li p {
+      font-size: 15px;
+    }
+
+    /* 成果報酬カード */
+    .reward-cards {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .reward-card {
+      padding: 22px 24px;
+    }
+
+    .reward-card .amount {
+      font-size: 36px;
+    }
+
+    .reward-card .per {
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .reward-card .detail {
+      font-size: 14px;
+    }
+
+    /* 売上テーブル */
+    .sales-table td {
+      padding: 16px 12px;
+      font-size: 16px;
+    }
+
+    .sales-table td:last-child {
+      font-size: 28px;
+    }
+
+    .table-note {
+      font-size: 14px;
+    }
+
+    /* 注意事項 */
+    .notes-list {
+      font-size: 16px;
+      line-height: 2.2;
+    }
+
+    .bottom-text {
+      position: static;
+      margin-top: 32px;
+      font-size: 14px;
+    }
+  }
+
   @media print {
     section {
       width: 100%;
