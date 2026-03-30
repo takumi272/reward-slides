@@ -27,7 +27,7 @@
   section {
     width: 100vw;
     height: 100vh;
-    padding: 60px 80px;
+    padding: 70px 90px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,39 +40,92 @@
     page-break-after: auto;
   }
 
-  /* タイトルスライド */
+  /* ===== タイトルスライド ===== */
   .title-slide {
-    align-items: center;
-    text-align: center;
+    padding: 0;
+  }
+
+  .title-slide .top-bar {
+    background: #333;
+    color: #fff;
+    padding: 24px 90px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .title-slide .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 90px;
   }
 
   .title-slide h1 {
-    font-size: 64px;
+    font-size: 52px;
     font-weight: 800;
-    letter-spacing: 0.08em;
-    margin-bottom: 24px;
+    line-height: 1.4;
+    margin-bottom: 8px;
   }
 
-  .title-slide .subtitle {
-    font-size: 20px;
+  .title-slide .accent {
+    font-size: 48px;
+    font-weight: 800;
+    color: #444;
+    line-height: 1.4;
+    margin-bottom: 32px;
+  }
+
+  .title-slide .desc {
+    font-size: 22px;
     color: #888;
+    margin-bottom: 48px;
+  }
+
+  .title-slide .divider {
+    width: 80px;
+    height: 2px;
+    background: #ccc;
+    margin-bottom: 32px;
+  }
+
+  .title-slide .toc {
+    list-style: none;
+    font-size: 18px;
+    line-height: 2;
+  }
+
+  .title-slide .toc li span.num {
+    font-weight: 700;
+    color: #333;
+    margin-right: 12px;
   }
 
   .title-slide .note {
     position: absolute;
-    bottom: 40px;
+    bottom: 36px;
+    right: 90px;
     font-size: 14px;
-    color: #aaa;
+    color: #999;
   }
 
-  /* コンテンツスライド */
+  /* ===== コンテンツスライド共通 ===== */
   .content-slide h2 {
-    font-size: 38px;
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 800;
+    padding-left: 20px;
+    border-left: 5px solid #333;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .content-slide .sub {
+    font-size: 18px;
+    color: #888;
     margin-bottom: 40px;
-    padding-bottom: 12px;
-    border-bottom: 3px solid #1a1a1a;
-    display: inline-block;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
   }
 
   .content-slide .body {
@@ -82,135 +135,172 @@
     justify-content: center;
   }
 
-  /* 固定報酬 */
-  .price-big {
-    font-size: 56px;
+  /* ===== ハイライトボックス ===== */
+  .highlight-box {
+    background: #333;
+    color: #fff;
+    padding: 32px 40px;
+    margin: 24px 0;
+  }
+
+  .highlight-box p {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  /* ===== 固定報酬 ===== */
+  .price-hero {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .price-hero .amount {
+    font-size: 100px;
     font-weight: 800;
-    margin-bottom: 36px;
+    color: #1a1a1a;
+    letter-spacing: 0.05em;
   }
 
-  .price-big span {
+  .price-hero .unit {
     font-size: 28px;
-    font-weight: 400;
-    color: #666;
+    color: #888;
+    margin-top: 4px;
   }
 
-  .step-list {
-    list-style: none;
-    display: flex;
-    gap: 48px;
-  }
-
-  .step-list li {
-    font-size: 20px;
-    line-height: 1.6;
-    padding: 16px 24px;
-    background: #f5f5f5;
-    border-radius: 8px;
-    flex: 1;
-  }
-
-  .step-list li strong {
-    display: block;
-    font-size: 22px;
-    margin-bottom: 4px;
-  }
-
-  /* 成果報酬 カード */
-  .cards {
+  .step-cards {
     display: flex;
     gap: 32px;
+    list-style: none;
   }
 
-  .card {
+  .step-cards li {
     flex: 1;
-    padding: 28px 32px;
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
+    border-top: 4px solid #333;
+    background: #fafafa;
+    padding: 24px 28px;
   }
 
-  .card h3 {
-    font-size: 22px;
+  .step-cards li strong {
+    display: block;
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 16px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 8px;
   }
 
-  .card .reward {
-    font-size: 36px;
-    font-weight: 800;
-    margin-bottom: 12px;
-  }
-
-  .card .reward span {
+  .step-cards li p {
     font-size: 18px;
-    font-weight: 400;
-    color: #666;
-  }
-
-  .card .detail {
-    font-size: 16px;
-    color: #666;
     line-height: 1.6;
+    color: #444;
   }
 
-  /* 売上報酬テーブル */
+  .step-cards li .note-text {
+    font-size: 14px;
+    color: #999;
+    margin-top: 6px;
+  }
+
+  /* ===== 成果報酬カード ===== */
+  .reward-cards {
+    display: flex;
+    gap: 28px;
+  }
+
+  .reward-card {
+    flex: 1;
+    border-top: 4px solid #333;
+    background: #fafafa;
+    padding: 28px 32px;
+    text-align: center;
+  }
+
+  .reward-card .amount {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+
+  .reward-card .per {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 20px;
+  }
+
+  .reward-card .detail {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  /* ===== 売上テーブル ===== */
   .sales-table {
     width: 100%;
-    max-width: 700px;
+    max-width: 720px;
     border-collapse: collapse;
-    font-size: 22px;
   }
 
-  .sales-table th,
-  .sales-table td {
-    padding: 18px 24px;
-    text-align: left;
+  .sales-table tr {
     border-bottom: 1px solid #e0e0e0;
   }
 
-  .sales-table th {
-    font-weight: 400;
-    color: #888;
-    font-size: 16px;
-  }
-
-  .sales-table td:last-child {
-    font-weight: 800;
-    font-size: 28px;
-    text-align: right;
-  }
-
-  .sales-table tr:last-child td {
+  .sales-table tr:last-child {
     border-bottom: none;
   }
 
-  .table-note {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #888;
+  .sales-table td {
+    padding: 22px 28px;
+    font-size: 22px;
   }
 
-  /* 注意事項 */
+  .sales-table td:last-child {
+    text-align: right;
+    font-size: 44px;
+    font-weight: 800;
+    color: #1a1a1a;
+  }
+
+  .sales-table td:first-child {
+    color: #555;
+  }
+
+  .table-note {
+    margin-top: 24px;
+    font-size: 16px;
+    color: #999;
+  }
+
+  /* ===== 注意事項 ===== */
   .notes-list {
     list-style: none;
-    font-size: 24px;
-    line-height: 2.2;
+    font-size: 22px;
+    line-height: 2.4;
+    color: #444;
+  }
+
+  .notes-list li {
+    padding-left: 20px;
+    position: relative;
   }
 
   .notes-list li::before {
-    content: "—";
-    margin-right: 16px;
-    color: #aaa;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: #333;
+    border-radius: 50%;
   }
 
-  .page-num {
+  .bottom-text {
     position: absolute;
-    bottom: 30px;
-    right: 50px;
-    font-size: 14px;
-    color: #ccc;
+    bottom: 36px;
+    font-size: 16px;
+    color: #aaa;
   }
 
   @media print {
@@ -225,67 +315,78 @@
 
 <!-- 1. タイトル -->
 <section class="title-slide">
-  <h1>報酬について</h1>
-  <p class="subtitle">固定報酬と成果報酬の説明</p>
-  <p class="note">※ 特別枠の方はこの報酬体系は適用されません</p>
+  <div class="top-bar">報酬面について</div>
+  <div class="main">
+    <h1>報酬について</h1>
+    <p class="accent">固定報酬と成果報酬</p>
+    <p class="desc">それぞれの報酬体系を説明します。</p>
+    <div class="divider"></div>
+    <ul class="toc">
+      <li><span class="num">01</span>固定報酬</li>
+      <li><span class="num">02</span>成果報酬（LINE追加・テスト期間）</li>
+      <li><span class="num">03</span>成果報酬（売上報酬）</li>
+      <li><span class="num">04</span>注意事項</li>
+    </ul>
+  </div>
+  <p class="note">※ 特別枠の方には適用されません</p>
 </section>
 
 <!-- 2. 固定報酬 -->
 <section class="content-slide">
   <h2>固定報酬</h2>
+  <p class="sub">動画1本作成ごとの報酬</p>
   <div class="body">
-    <p class="price-big">¥2,000 <span>/ 1本</span></p>
-    <ul class="step-list">
+    <div class="price-hero">
+      <div class="amount">2,000円</div>
+      <div class="unit">/ 1本あたり</div>
+    </div>
+    <ul class="step-cards">
       <li>
         <strong>Step 1</strong>
-        動画作成 → 添削OK時点でカウント
+        <p>動画作成 → 添削OKでカウント</p>
       </li>
       <li>
         <strong>Step 2 以降</strong>
-        YouTubeに投稿した時点でカウント<br>
-        <span style="color:#888; font-size:15px;">※ サポーターのOKが前提</span>
+        <p>YouTubeに投稿した時点でカウント</p>
+        <p class="note-text">※ サポーターのOKが前提</p>
       </li>
     </ul>
   </div>
-  <span class="page-num">2 / 5</span>
 </section>
 
-<!-- 3. 成果報酬① LINE追加 & テスト期間 -->
+<!-- 3. 成果報酬① -->
 <section class="content-slide">
   <h2>成果報酬</h2>
+  <p class="sub">LINE追加人数 & テスト期間参加人数</p>
   <div class="body">
-    <div class="cards">
-      <div class="card">
-        <h3>LINE追加人数</h3>
-        <p class="reward">¥3,000 <span>/ 10人ごと</span></p>
+    <div class="reward-cards">
+      <div class="reward-card">
+        <div class="amount">3,000円</div>
+        <div class="per">10人追加ごと</div>
         <p class="detail">
-          10人単位で報酬発生<br>
-          例: 19人 → ¥3,000 / 20人 → ¥6,000<br>
-          <span style="color:#888;">※ 追加人数は各自で確認可能</span>
+          LINE公式の追加人数に対する報酬。<br>
+          10人単位で発生（19人→3,000円 / 20人→6,000円）<br>
+          追加人数は各自で確認可能。
         </p>
       </div>
-      <div class="card">
-        <h3>テスト期間 参加人数</h3>
-        <p class="reward">¥2,000 <span>/ 1人ごと</span></p>
+      <div class="reward-card">
+        <div class="amount">2,000円</div>
+        <div class="per">1人ごと</div>
         <p class="detail">
-          テスト期間に入った人数で報酬発生<br>
-          <span style="color:#888;">※ 人数は運営側のみ確認可能</span>
+          テスト期間に入った人数に対する報酬。<br>
+          人数は運営側のみ確認可能。
         </p>
       </div>
     </div>
   </div>
-  <span class="page-num">3 / 5</span>
 </section>
 
 <!-- 4. 成果報酬② 売上報酬 -->
 <section class="content-slide">
   <h2>売上報酬</h2>
+  <p class="sub">着金額に応じた報酬割合（20〜40%）</p>
   <div class="body">
     <table class="sales-table">
-      <tr>
-        <th>着金額</th>
-        <th></th>
-      </tr>
       <tr>
         <td>1,000万円 未満</td>
         <td>20%</td>
@@ -299,14 +400,14 @@
         <td>40%</td>
       </tr>
     </table>
-    <p class="table-note">※ 毎月リセット</p>
+    <p class="table-note">※ 毎月リセットされます</p>
   </div>
-  <span class="page-num">4 / 5</span>
 </section>
 
 <!-- 5. 注意事項 -->
 <section class="content-slide">
   <h2>注意事項</h2>
+  <p class="sub"></p>
   <div class="body">
     <ul class="notes-list">
       <li>特別枠の方にはこの報酬体系は適用されません</li>
@@ -314,7 +415,7 @@
       <li>動画のOKをもらっていない場合はカウント対象外</li>
     </ul>
   </div>
-  <span class="page-num">5 / 5</span>
+  <p class="bottom-text">報酬に関する説明は以上になります。</p>
 </section>
 
 </body>
