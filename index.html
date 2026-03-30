@@ -309,25 +309,19 @@
 
   /* ===== スマホ対応 ===== */
   @media screen and (max-width: 768px) {
-    html {
-      overflow-y: scroll;
-      scroll-snap-type: y proximity;
-      -webkit-overflow-scrolling: touch;
-    }
-
     body {
       overflow-x: hidden;
+      background: #f0f0f0;
     }
 
     section {
       width: 100%;
-      min-height: 100vh;
-      min-height: 100dvh;
+      min-height: auto;
       height: auto;
-      padding: 32px 24px;
-      scroll-snap-align: start;
-      overflow-y: auto;
-      flex-shrink: 0;
+      padding: 32px 24px 40px;
+      margin-bottom: 12px;
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
     }
 
     /* タイトル */
