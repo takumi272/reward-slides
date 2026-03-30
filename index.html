@@ -6,7 +6,7 @@
 <title>報酬について</title>
 <style>
   @page {
-    size: landscape;
+    size: 1920px 1080px;
     margin: 0;
   }
 
@@ -19,21 +19,27 @@
   body {
     font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", system-ui, sans-serif;
     color: #1a1a1a;
-    background: #fff;
+    background: #e8e8e8;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0;
   }
 
   section {
-    width: 100vw;
-    height: 100vh;
-    padding: 70px 90px;
+    width: 1920px;
+    height: 1080px;
+    padding: 80px 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    page-break-after: always;
     position: relative;
     background: #fff;
+    page-break-after: always;
+    flex-shrink: 0;
   }
 
   section:last-child {
@@ -48,8 +54,8 @@
   .title-slide .top-bar {
     background: #333;
     color: #fff;
-    padding: 24px 90px;
-    font-size: 18px;
+    padding: 28px 120px;
+    font-size: 24px;
     font-weight: 600;
     letter-spacing: 0.05em;
   }
@@ -59,72 +65,72 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 90px;
+    padding: 0 120px;
   }
 
   .title-slide h1 {
-    font-size: 52px;
+    font-size: 72px;
     font-weight: 800;
     line-height: 1.4;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
 
   .title-slide .accent {
-    font-size: 48px;
+    font-size: 60px;
     font-weight: 800;
     color: #444;
     line-height: 1.4;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
 
   .title-slide .desc {
-    font-size: 22px;
+    font-size: 28px;
     color: #888;
-    margin-bottom: 48px;
+    margin-bottom: 60px;
   }
 
   .title-slide .divider {
-    width: 80px;
-    height: 2px;
+    width: 100px;
+    height: 3px;
     background: #ccc;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
 
   .title-slide .toc {
     list-style: none;
-    font-size: 18px;
-    line-height: 2;
+    font-size: 24px;
+    line-height: 2.2;
   }
 
   .title-slide .toc li span.num {
     font-weight: 700;
     color: #333;
-    margin-right: 12px;
+    margin-right: 16px;
   }
 
   .title-slide .note {
     position: absolute;
-    bottom: 36px;
-    right: 90px;
-    font-size: 14px;
+    bottom: 40px;
+    right: 120px;
+    font-size: 20px;
     color: #999;
   }
 
   /* ===== コンテンツスライド共通 ===== */
   .content-slide h2 {
-    font-size: 40px;
+    font-size: 52px;
     font-weight: 800;
-    padding-left: 20px;
-    border-left: 5px solid #333;
+    padding-left: 24px;
+    border-left: 6px solid #333;
     margin-bottom: 12px;
     line-height: 1.3;
   }
 
   .content-slide .sub {
-    font-size: 18px;
+    font-size: 22px;
     color: #888;
-    margin-bottom: 40px;
-    padding-bottom: 20px;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
     border-bottom: 1px solid #e0e0e0;
   }
 
@@ -135,104 +141,86 @@
     justify-content: center;
   }
 
-  /* ===== ハイライトボックス ===== */
-  .highlight-box {
-    background: #333;
-    color: #fff;
-    padding: 32px 40px;
-    margin: 24px 0;
-  }
-
-  .highlight-box p {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 1.5;
-  }
-
   /* ===== 固定報酬 ===== */
   .price-hero {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
   }
 
   .price-hero .amount {
-    font-size: 100px;
+    font-size: 120px;
     font-weight: 800;
     color: #1a1a1a;
     letter-spacing: 0.05em;
   }
 
   .price-hero .unit {
-    font-size: 28px;
+    font-size: 32px;
     color: #888;
     margin-top: 4px;
   }
 
   .step-cards {
     display: flex;
-    gap: 32px;
+    gap: 40px;
     list-style: none;
   }
 
   .step-cards li {
     flex: 1;
-    border-top: 4px solid #333;
+    border-top: 5px solid #333;
     background: #fafafa;
-    padding: 24px 28px;
+    padding: 28px 36px;
   }
 
   .step-cards li strong {
     display: block;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   .step-cards li p {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.6;
     color: #444;
   }
 
   .step-cards li .note-text {
-    font-size: 14px;
+    font-size: 18px;
     color: #999;
-    margin-top: 6px;
+    margin-top: 8px;
   }
 
   /* ===== 成果報酬カード ===== */
   .reward-cards {
     display: flex;
-    gap: 28px;
+    gap: 40px;
   }
 
   .reward-card {
     flex: 1;
-    border-top: 4px solid #333;
+    border-top: 5px solid #333;
     background: #fafafa;
-    padding: 28px 32px;
-    text-align: center;
-  }
-
-  .reward-card .info {
+    padding: 36px 40px;
     text-align: center;
   }
 
   .reward-card .amount {
-    font-size: 48px;
+    font-size: 60px;
     font-weight: 800;
     color: #1a1a1a;
     margin-bottom: 8px;
   }
 
   .reward-card .per {
-    font-size: 16px;
+    font-size: 20px;
     color: #888;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 
   .reward-card .detail {
-    font-size: 15px;
+    font-size: 18px;
     color: #666;
     line-height: 1.7;
     text-align: left;
@@ -241,7 +229,7 @@
   /* ===== 売上テーブル ===== */
   .sales-table {
     width: 100%;
-    max-width: 720px;
+    max-width: 900px;
     border-collapse: collapse;
   }
 
@@ -254,13 +242,13 @@
   }
 
   .sales-table td {
-    padding: 22px 28px;
-    font-size: 22px;
+    padding: 28px 36px;
+    font-size: 28px;
   }
 
   .sales-table td:last-child {
     text-align: right;
-    font-size: 44px;
+    font-size: 56px;
     font-weight: 800;
     color: #1a1a1a;
   }
@@ -270,21 +258,21 @@
   }
 
   .table-note {
-    margin-top: 24px;
-    font-size: 16px;
+    margin-top: 28px;
+    font-size: 20px;
     color: #999;
   }
 
   /* ===== 注意事項 ===== */
   .notes-list {
     list-style: none;
-    font-size: 22px;
-    line-height: 2.4;
+    font-size: 28px;
+    line-height: 2.6;
     color: #444;
   }
 
   .notes-list li {
-    padding-left: 20px;
+    padding-left: 24px;
     position: relative;
   }
 
@@ -294,199 +282,181 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     background: #333;
     border-radius: 50%;
   }
 
   .bottom-text {
     position: absolute;
-    bottom: 36px;
-    font-size: 16px;
+    bottom: 40px;
+    font-size: 20px;
     color: #aaa;
   }
 
-  /* ===== スマホ対応 ===== */
-  @media screen and (max-width: 768px) {
-    body {
-      overflow-x: hidden;
-      background: #f0f0f0;
+  /* ===== レスポンシブ（画面幅に合わせてスケーリング） ===== */
+  @media screen and (max-width: 1920px) {
+    section {
+      width: 100vw;
+      height: calc(100vw * 9 / 16);
+    }
+
+    .title-slide .top-bar {
+      padding: calc(100vw * 0.0146) calc(100vw * 0.0625);
+      font-size: calc(100vw * 0.0125);
+    }
+
+    .title-slide .main {
+      padding: 0 calc(100vw * 0.0625);
+    }
+
+    .title-slide h1 {
+      font-size: calc(100vw * 0.0375);
+    }
+
+    .title-slide .accent {
+      font-size: calc(100vw * 0.03125);
+      margin-bottom: calc(100vw * 0.0208);
+    }
+
+    .title-slide .desc {
+      font-size: calc(100vw * 0.0146);
+      margin-bottom: calc(100vw * 0.03125);
+    }
+
+    .title-slide .divider {
+      width: calc(100vw * 0.052);
+      margin-bottom: calc(100vw * 0.0208);
+    }
+
+    .title-slide .toc {
+      font-size: calc(100vw * 0.0125);
+    }
+
+    .title-slide .note {
+      font-size: calc(100vw * 0.0104);
+      bottom: calc(100vw * 0.0208);
+      right: calc(100vw * 0.0625);
     }
 
     section {
-      width: 100%;
-      min-height: auto;
-      height: auto;
-      padding: 32px 24px 40px;
-      margin-bottom: 12px;
-      background: #fff;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      padding: calc(100vw * 0.0417) calc(100vw * 0.0625);
     }
 
-    /* タイトル */
     .title-slide {
       padding: 0;
     }
 
-    .title-slide .top-bar {
-      padding: 14px 24px;
-      font-size: 13px;
-    }
-
-    .title-slide .main {
-      padding: 0 24px;
-    }
-
-    .title-slide h1 {
-      font-size: 28px;
-      margin-bottom: 4px;
-    }
-
-    .title-slide .accent {
-      font-size: 22px;
-      margin-bottom: 16px;
-    }
-
-    .title-slide .desc {
-      font-size: 14px;
-      margin-bottom: 24px;
-    }
-
-    .title-slide .divider {
-      margin-bottom: 16px;
-    }
-
-    .title-slide .toc {
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    .title-slide .note {
-      position: static;
-      margin-top: 24px;
-      padding: 0 24px;
-      font-size: 12px;
-    }
-
-    /* コンテンツ共通 */
     .content-slide h2 {
-      font-size: 22px;
-      padding-left: 12px;
-      border-left-width: 4px;
-      margin-bottom: 6px;
+      font-size: calc(100vw * 0.0271);
+      padding-left: calc(100vw * 0.0125);
+      border-left-width: calc(100vw * 0.003125);
+      margin-bottom: calc(100vw * 0.00625);
     }
 
     .content-slide .sub {
-      font-size: 12px;
-      margin-bottom: 16px;
-      padding-bottom: 10px;
+      font-size: calc(100vw * 0.01146);
+      margin-bottom: calc(100vw * 0.025);
+      padding-bottom: calc(100vw * 0.0125);
     }
 
-    .content-slide .body {
-      flex: 1;
-      justify-content: flex-start;
-      padding-top: 8px;
-    }
-
-    /* 固定報酬 */
     .price-hero {
-      margin-bottom: 20px;
+      margin-bottom: calc(100vw * 0.025);
     }
 
     .price-hero .amount {
-      font-size: 44px;
+      font-size: calc(100vw * 0.0625);
     }
 
     .price-hero .unit {
-      font-size: 15px;
+      font-size: calc(100vw * 0.01667);
     }
 
     .step-cards {
-      flex-direction: column;
-      gap: 10px;
+      gap: calc(100vw * 0.0208);
     }
 
     .step-cards li {
-      padding: 14px 16px;
+      padding: calc(100vw * 0.0146) calc(100vw * 0.01875);
+      border-top-width: calc(100vw * 0.0026);
     }
 
     .step-cards li strong {
-      font-size: 15px;
-      margin-bottom: 4px;
+      font-size: calc(100vw * 0.0125);
+      margin-bottom: calc(100vw * 0.0052);
     }
 
     .step-cards li p {
-      font-size: 13px;
+      font-size: calc(100vw * 0.01146);
     }
 
     .step-cards li .note-text {
-      font-size: 12px;
+      font-size: calc(100vw * 0.009375);
     }
 
-    /* 成果報酬カード */
     .reward-cards {
-      flex-direction: column;
-      gap: 12px;
+      gap: calc(100vw * 0.0208);
     }
 
     .reward-card {
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      text-align: left;
+      padding: calc(100vw * 0.01875) calc(100vw * 0.0208);
+      border-top-width: calc(100vw * 0.0026);
     }
 
     .reward-card .amount {
-      font-size: 28px;
-      margin-bottom: 0;
-      white-space: nowrap;
+      font-size: calc(100vw * 0.03125);
     }
 
     .reward-card .per {
-      font-size: 12px;
-      margin-bottom: 0;
+      font-size: calc(100vw * 0.0104);
+      margin-bottom: calc(100vw * 0.0125);
     }
 
     .reward-card .detail {
-      font-size: 12px;
-      line-height: 1.5;
+      font-size: calc(100vw * 0.009375);
     }
 
-    .reward-card .info {
-      flex: 1;
-    }
-
-    /* 売上テーブル */
     .sales-table td {
-      padding: 14px 8px;
-      font-size: 15px;
+      padding: calc(100vw * 0.0146) calc(100vw * 0.01875);
+      font-size: calc(100vw * 0.0146);
     }
 
     .sales-table td:last-child {
-      font-size: 24px;
+      font-size: calc(100vw * 0.0292);
     }
 
     .table-note {
-      font-size: 12px;
-      margin-top: 16px;
+      font-size: calc(100vw * 0.0104);
+      margin-top: calc(100vw * 0.0146);
     }
 
-    /* 注意事項 */
     .notes-list {
-      font-size: 15px;
-      line-height: 2;
+      font-size: calc(100vw * 0.0146);
+    }
+
+    .notes-list li {
+      padding-left: calc(100vw * 0.0125);
+    }
+
+    .notes-list li::before {
+      width: calc(100vw * 0.00417);
+      height: calc(100vw * 0.00417);
     }
 
     .bottom-text {
-      position: static;
-      margin-top: 24px;
-      font-size: 12px;
+      font-size: calc(100vw * 0.0104);
+      bottom: calc(100vw * 0.0208);
     }
   }
 
   @media print {
+    body {
+      background: #fff;
+      padding: 0;
+      gap: 0;
+    }
+
     section {
       width: 100%;
       height: 100%;
@@ -545,23 +515,19 @@
     <div class="reward-cards">
       <div class="reward-card">
         <div class="amount">3,000円</div>
-        <div class="info">
-          <div class="per">LINE追加 10人ごと</div>
-          <p class="detail">
-            10人単位で発生（19人→3,000円 / 20人→6,000円）<br>
-            追加人数は各自で確認可能。
-          </p>
-        </div>
+        <div class="per">LINE追加 10人ごと</div>
+        <p class="detail">
+          10人単位で発生（19人→3,000円 / 20人→6,000円）<br>
+          追加人数は各自で確認可能。
+        </p>
       </div>
       <div class="reward-card">
         <div class="amount">2,000円</div>
-        <div class="info">
-          <div class="per">テスト期間 1人ごと</div>
-          <p class="detail">
-            テスト期間に入った人数で報酬発生。<br>
-            人数は運営側のみ確認可能。
-          </p>
-        </div>
+        <div class="per">テスト期間 1人ごと</div>
+        <p class="detail">
+          テスト期間に入った人数で報酬発生。<br>
+          人数は運営側のみ確認可能。
+        </p>
       </div>
     </div>
   </div>
